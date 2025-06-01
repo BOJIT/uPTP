@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "uPTP")(type "KiCad")(uri "${KIPRJMOD}/uPTP.kicad_sym")(options "")(descr ""))
+)
