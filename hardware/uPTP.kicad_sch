@@ -743,6 +743,151 @@
 				)
 			)
 		)
+		(symbol "Device:D_Schottky"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Schottky"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Schottky diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_Schottky_0_1"
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Schottky_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Mechanical:MountingHole_Pad"
 			(pin_numbers hide)
 			(pin_names
@@ -3918,6 +4063,222 @@
 				)
 			)
 		)
+		(symbol "uPTP:TMI7301"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 2.794 11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TMI7301"
+				(at 5.08 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "uPTP:SOP-8_L4.9-W3.9-P1.27-LS6.0-TL"
+				(at 0 -26.67 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "POE 802.3af Controller IC"
+				(at 0 -31.496 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part" "C29779858"
+				(at 0 -29.21 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TMI7301_0_1"
+				(rectangle
+					(start -6.35 10.16)
+					(end 6.35 -11.43)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TMI7301_1_1"
+				(pin input line
+					(at -8.89 -2.54 0)
+					(length 2.54)
+					(name "MODE"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -5.08 0)
+					(length 2.54)
+					(name "CLASS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 7.62 0)
+					(length 2.54)
+					(name "DET"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -13.97 90)
+					(length 2.54)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 8.89 -8.89 180)
+					(length 2.54)
+					(name "RTN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 8.89 0 180)
+					(length 2.54)
+					(name "PGN_MPS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 8.89 7.62 180)
+					(length 2.54)
+					(name "PG"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 12.7 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "uPTP:USB-C-SMD_TYPE-C-16PIN"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4862,16 +5223,16 @@
 	)
 	(symbol
 		(lib_id "uPTP:HC-RJ45-055-7")
-		(at 247.65 120.65 0)
+		(at 36.83 152.4 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "0f0eeb54-42de-45c1-9563-95a91ee2574a")
 		(property "Reference" "U2"
-			(at 257.81 119.3799 0)
+			(at 26.67 151.1299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4880,7 +5241,7 @@
 			)
 		)
 		(property "Value" "HC-RJ45-055-7"
-			(at 257.81 121.9199 0)
+			(at 26.67 153.6699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4889,7 +5250,7 @@
 			)
 		)
 		(property "Footprint" "uPTP:RJ45-SMD_HC-RJ45-055-7_1"
-			(at 247.65 142.24 0)
+			(at 36.83 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4898,7 +5259,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 241.3 120.65 0)
+			(at 43.18 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4907,7 +5268,7 @@
 			)
 		)
 		(property "Description" "Half-Recessed SMD RJ45 Connector"
-			(at 241.3 120.65 0)
+			(at 43.18 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4916,7 +5277,7 @@
 			)
 		)
 		(property "LCSC Part" "C3000213"
-			(at 247.65 144.78 0)
+			(at 36.83 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4965,7 +5326,7 @@
 	)
 	(symbol
 		(lib_id "Device:Crystal_GND2_Small")
-		(at 185.42 57.15 0)
+		(at 193.04 97.79 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4974,7 +5335,7 @@
 		(fields_autoplaced yes)
 		(uuid "1d92ec70-8999-4f6d-9bb8-c9c5b746fbff")
 		(property "Reference" "Y1"
-			(at 185.42 50.8 0)
+			(at 193.04 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4982,7 +5343,7 @@
 			)
 		)
 		(property "Value" "Crystal_GND2_Small"
-			(at 185.42 53.34 0)
+			(at 193.04 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4990,7 +5351,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 185.42 57.15 0)
+			(at 193.04 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4999,7 +5360,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 185.42 57.15 0)
+			(at 193.04 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5008,7 +5369,7 @@
 			)
 		)
 		(property "Description" "Three pin crystal, GND on pin 2, small symbol"
-			(at 185.42 57.15 0)
+			(at 193.04 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5106,7 +5467,7 @@
 	)
 	(symbol
 		(lib_id "uPTP:B1608S")
-		(at 218.44 120.65 0)
+		(at 62.23 152.4 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5114,7 +5475,7 @@
 		(dnp no)
 		(uuid "8a70d419-640a-48bb-81d7-67456945c4f3")
 		(property "Reference" "TR1"
-			(at 218.44 108.966 0)
+			(at 62.23 140.716 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5122,7 +5483,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 218.44 109.22 0)
+			(at 62.23 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5130,7 +5491,7 @@
 			)
 		)
 		(property "Footprint" "uPTP:B1608S"
-			(at 218.44 135.128 0)
+			(at 62.23 166.878 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5139,7 +5500,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 218.44 109.22 0)
+			(at 62.23 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5148,7 +5509,7 @@
 			)
 		)
 		(property "Description" "POE-Rated (720mA) Ethernet Magnetics"
-			(at 218.186 132.588 0)
+			(at 61.976 164.338 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5157,7 +5518,7 @@
 			)
 		)
 		(property "LCSC Part" "C507596"
-			(at 218.44 137.414 0)
+			(at 62.23 169.164 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5279,7 +5640,7 @@
 	)
 	(symbol
 		(lib_id "uPTP:CH32V30xWxUx")
-		(at 140.97 106.68 0)
+		(at 152.4 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5288,7 +5649,7 @@
 		(fields_autoplaced yes)
 		(uuid "9c21f093-45a4-4fce-9c41-c1710234db5d")
 		(property "Reference" "U1"
-			(at 153.3241 157.48 0)
+			(at 164.7541 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5297,7 +5658,7 @@
 			)
 		)
 		(property "Value" "CH32V307WCU6"
-			(at 153.3241 160.02 0)
+			(at 164.7541 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5306,7 +5667,7 @@
 			)
 		)
 		(property "Footprint" "uPTP:QFN-68_L8.0-W8.0-P0.40-BL-EP6.7"
-			(at 140.97 101.6 0)
+			(at 152.4 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5315,7 +5676,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.wch-ic.com/products/CH32V307.html?"
-			(at 140.97 111.76 0)
+			(at 152.4 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5324,7 +5685,7 @@
 			)
 		)
 		(property "Description" "The CH32V303/5/7 is an connectivity MCUs based on 32-bit RISC-V core."
-			(at 140.97 106.68 0)
+			(at 152.4 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5333,7 +5694,7 @@
 			)
 		)
 		(property "LCSC Part" "C5142795"
-			(at 140.716 181.356 0)
+			(at 152.146 162.306 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5561,6 +5922,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 67.31 55.88 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a11c9a37-1f97-4b81-a19c-b547c559f991")
+		(property "Reference" "D2"
+			(at 67.6275 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_Schottky"
+			(at 67.6275 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 67.31 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 67.31 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "14a675d8-36a8-491e-9faf-8a46b86b507b")
+		)
+		(pin "1"
+			(uuid "38fe1e56-4556-444e-a95c-be1d2d3f4bb9")
+		)
+		(instances
+			(project ""
+				(path "/c29659fd-9e8d-4714-a690-4e74e6e849c2"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "uPTP:USB-C-SMD_TYPE-C-16PIN")
 		(at 40.64 76.2 0)
 		(mirror y)
@@ -5739,6 +6168,103 @@
 		)
 	)
 	(symbol
+		(lib_id "uPTP:TMI7301")
+		(at 87.63 151.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bbce9b7d-09e9-40b1-86c9-87b98e4deebc")
+		(property "Reference" "U3"
+			(at 89.8241 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TMI7301"
+			(at 89.8241 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "uPTP:SOP-8_L4.9-W3.9-P1.27-LS6.0-TL"
+			(at 87.63 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "POE 802.3af Controller IC"
+			(at 87.63 182.626 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C29779858"
+			(at 87.63 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "2f1eff60-4c09-41fd-91ce-a7ab348202e6")
+		)
+		(pin "7"
+			(uuid "1a25ecd3-c07e-43bc-8252-70b59e380115")
+		)
+		(pin "6"
+			(uuid "311af314-1814-49cd-a873-fa121fc47f8f")
+		)
+		(pin "1"
+			(uuid "162b0c10-4412-4188-8dc4-c574d04f6449")
+		)
+		(pin "8"
+			(uuid "632334d3-f5d6-4d92-89e3-763da8df2b7c")
+		)
+		(pin "2"
+			(uuid "ed4125ed-97fe-4ae8-9a9c-ab3342895884")
+		)
+		(pin "3"
+			(uuid "388145d8-1572-4e77-be10-eafe0aafdf45")
+		)
+		(pin "4"
+			(uuid "3eccce6a-15b8-4d80-a8e9-ef42f106664d")
+		)
+		(instances
+			(project ""
+				(path "/c29659fd-9e8d-4714-a690-4e74e6e849c2"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "uPTP:USBLC6-2SC6")
 		(at 80.01 74.93 0)
 		(unit 1)
@@ -5829,7 +6355,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Pin")
-		(at 45.72 123.19 0)
+		(at 236.22 130.81 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5838,7 +6364,7 @@
 		(fields_autoplaced yes)
 		(uuid "d9784eb1-2f5a-46e0-a23b-06468fb259aa")
 		(property "Reference" "J1"
-			(at 46.355 115.57 0)
+			(at 236.855 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5846,7 +6372,7 @@
 			)
 		)
 		(property "Value" "Conn_01x04_Pin"
-			(at 46.355 118.11 0)
+			(at 236.855 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5854,7 +6380,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal"
-			(at 45.72 123.19 0)
+			(at 236.22 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5863,7 +6389,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 45.72 123.19 0)
+			(at 236.22 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5872,7 +6398,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 45.72 123.19 0)
+			(at 236.22 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
