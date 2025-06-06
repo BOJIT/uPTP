@@ -5,4 +5,64 @@
 	(uuid "336ba15b-a650-4d8c-be91-76791d12a4de")
 	(paper "A4")
 	(lib_symbols)
+	(hierarchical_label "V_POE"
+		(shape input)
+		(at 50.8 38.1 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "43a8d449-624b-4787-9e0d-2d22ad0ddb48")
+	)
+	(hierarchical_label "V_AUX"
+		(shape input)
+		(at 50.8 50.8 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "56717db7-e568-4a96-8d06-f662d339afad")
+	)
+	(hierarchical_label "V_USB"
+		(shape input)
+		(at 50.8 63.5 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6c5ebdfe-e9fd-4f15-963b-0b689ecfb80f")
+	)
+	(hierarchical_label "V_5V"
+		(shape output)
+		(at 157.48 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8edd5e91-78f0-400d-b58e-1baee28f6aa7")
+	)
+	(hierarchical_label "V_3V3"
+		(shape output)
+		(at 157.48 57.15 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ae953b0b-dc98-433a-b143-88e640e1e3fd")
+	)
 )

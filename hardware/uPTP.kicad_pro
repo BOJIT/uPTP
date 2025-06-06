@@ -463,7 +463,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "Diff_100_Ohm",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "pcb_color": "rgb(194, 0, 194)",
         "schematic_color": "rgb(0, 194, 194)",
         "track_width": 0.2,
         "via_diameter": 0.6,
