@@ -1049,182 +1049,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:Crystal_GND2_Small"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Y"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Crystal_GND2_Small"
-				(at 0 3.175 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Three pin crystal, GND on pin 2, small symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "quartz ceramic resonator oscillator"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Crystal*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Crystal_GND2_Small_0_1"
-				(polyline
-					(pts
-						(xy -1.27 -0.762) (xy -1.27 0.762)
-					)
-					(stroke
-						(width 0.381)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 -1.905) (xy 1.27 -1.905) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -0.762 -1.524)
-					(end 0.762 1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -0.762) (xy 1.27 0.762)
-					)
-					(stroke
-						(width 0.381)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Crystal_GND2_Small_1_1"
-				(pin passive line
-					(at -2.54 0 0)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0.762 0.762)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 0.635)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0.762 0.762)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 0 180)
-					(length 1.27)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 0.762 0.762)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:D_Schottky"
 			(pin_numbers
 				(hide yes)
@@ -4976,6 +4800,212 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "uPTP:X50328MSB2GI"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "X"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "X50328MSB2GI"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "uPTP:CRYSTAL-SMD_L5.0-W3.2"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/SMD-Crystals_YSX530GA-8MHZ-20PF-10PPM-40-85_C115962.html"
+				(at 0 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "8MHz Crystal Oscillator (Basic Part)"
+				(at 1.27 -14.986 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part" "C115962"
+				(at 0 -12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "X50328MSB2GI_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -1.52 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.02) (xy -1.27 1.02)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.78) (xy -1.27 1.78)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.76 -1.78) (xy -0.76 1.78) (xy 0.76 1.78) (xy 0.76 -1.78)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.76 1.78) (xy 0.76 -1.78) (xy -0.76 -1.78) (xy -0.76 1.78) (xy 0.76 1.78)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.76 -1.78) (xy -0.76 -1.78)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.02) (xy 1.27 1.02)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.78) (xy 1.27 1.78)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.52 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "X50328MSB2GI_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "TODO: CHECK LOAD CAPACITANCE FOR TARGET XTAL!"
 		(exclude_from_sim no)
@@ -5010,12 +5040,6 @@
 		(uuid "516b14a3-8ec5-454c-a055-dd04cf311883")
 	)
 	(junction
-		(at 259.08 97.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "59ca7ac3-c2df-4a3d-9a48-4d943d794dc0")
-	)
-	(junction
 		(at 254 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5040,10 +5064,16 @@
 		(uuid "a76b6aac-69c4-4480-a25b-189fccf1736b")
 	)
 	(junction
-		(at 248.92 97.79)
+		(at 261.62 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c7fee8bd-d1a2-44df-896c-f279b5c69fbe")
+		(uuid "add9636e-e607-4785-b67d-be1837e89e7f")
+	)
+	(junction
+		(at 246.38 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ccd469da-8074-403e-9b47-0a26c35c4c5b")
 	)
 	(junction
 		(at 60.96 147.32)
@@ -5099,13 +5129,23 @@
 	)
 	(wire
 		(pts
-			(xy 254 110.49) (xy 248.92 110.49)
+			(xy 254 110.49) (xy 246.38 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "013a0dbc-d293-45b7-9111-5e0bf5086940")
+	)
+	(wire
+		(pts
+			(xy 246.38 97.79) (xy 248.92 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08c32975-560b-4a3a-bacc-3dfeabee3ddf")
 	)
 	(wire
 		(pts
@@ -5256,6 +5296,16 @@
 			(type default)
 		)
 		(uuid "390b5ba5-f3bb-4e86-9f24-2a505b63e417")
+	)
+	(wire
+		(pts
+			(xy 261.62 97.79) (xy 273.05 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b4b9ffd-edef-46bc-8931-bc80f6c78281")
 	)
 	(wire
 		(pts
@@ -5429,7 +5479,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 110.49) (xy 254 110.49)
+			(xy 261.62 110.49) (xy 254 110.49)
 		)
 		(stroke
 			(width 0)
@@ -5539,6 +5589,16 @@
 	)
 	(wire
 		(pts
+			(xy 259.08 97.79) (xy 261.62 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "792f876d-52cf-486b-b85d-871d08ea032b")
+	)
+	(wire
+		(pts
 			(xy 106.68 41.91) (xy 120.65 41.91)
 		)
 		(stroke
@@ -5559,7 +5619,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 97.79) (xy 248.92 100.33)
+			(xy 246.38 97.79) (xy 246.38 100.33)
 		)
 		(stroke
 			(width 0)
@@ -5606,16 +5666,6 @@
 			(type default)
 		)
 		(uuid "902a09b9-3239-442f-bfbf-f5b00e429733")
-	)
-	(wire
-		(pts
-			(xy 254 100.33) (xy 254 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "970558b4-57d0-47c6-9e0e-e45288ebb9c6")
 	)
 	(wire
 		(pts
@@ -5729,16 +5779,6 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 97.79) (xy 273.05 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0a151d5-c7bc-4cc0-9911-ea13237dcd7b")
-	)
-	(wire
-		(pts
 			(xy 59.69 139.7) (xy 59.69 144.78)
 		)
 		(stroke
@@ -5756,16 +5796,6 @@
 			(type default)
 		)
 		(uuid "c16ca453-2e28-4ba4-bf04-5f718b1555fc")
-	)
-	(wire
-		(pts
-			(xy 256.54 97.79) (xy 259.08 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c232ded8-3430-4ad0-84e9-21e038994f65")
 	)
 	(wire
 		(pts
@@ -5849,7 +5879,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 97.79) (xy 248.92 97.79)
+			(xy 234.95 97.79) (xy 246.38 97.79)
 		)
 		(stroke
 			(width 0)
@@ -5869,23 +5899,13 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 107.95) (xy 259.08 110.49)
+			(xy 261.62 107.95) (xy 261.62 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "df774bed-bd4a-47d4-90f2-156f1ad6a7fe")
-	)
-	(wire
-		(pts
-			(xy 251.46 97.79) (xy 248.92 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e0234763-daa6-4f6d-8939-d900902159ea")
 	)
 	(wire
 		(pts
@@ -5919,7 +5939,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 100.33) (xy 259.08 97.79)
+			(xy 261.62 100.33) (xy 261.62 97.79)
 		)
 		(stroke
 			(width 0)
@@ -5959,7 +5979,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 110.49) (xy 248.92 107.95)
+			(xy 246.38 110.49) (xy 246.38 107.95)
 		)
 		(stroke
 			(width 0)
@@ -6298,7 +6318,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 259.08 104.14 0)
+		(at 261.62 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6306,7 +6326,7 @@
 		(dnp no)
 		(uuid "0a580b51-5cf6-4289-8984-89f74941e50d")
 		(property "Reference" "C6"
-			(at 262.89 102.8699 0)
+			(at 265.43 102.8699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6315,7 +6335,7 @@
 			)
 		)
 		(property "Value" "20p"
-			(at 262.89 105.4099 0)
+			(at 265.43 105.4099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6324,7 +6344,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 260.0452 107.95 0)
+			(at 262.5852 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6333,7 +6353,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 259.08 104.14 0)
+			(at 261.62 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6342,7 +6362,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 259.08 104.14 0)
+			(at 261.62 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6492,77 +6512,6 @@
 			(project "uPTP"
 				(path "/c29659fd-9e8d-4714-a690-4e74e6e849c2"
 					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Crystal_GND2_Small")
-		(at 254 97.79 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1d92ec70-8999-4f6d-9bb8-c9c5b746fbff")
-		(property "Reference" "Y1"
-			(at 254 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Crystal_GND2_Small"
-			(at 254 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 254 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 254 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Three pin crystal, GND on pin 2, small symbol"
-			(at 254 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "31fad868-e9cb-460c-ad54-e84d26293511")
-		)
-		(pin "3"
-			(uuid "5e0ca38d-77fa-4421-be92-e5b42b37755e")
-		)
-		(pin "1"
-			(uuid "7e10779c-578a-4868-ac71-3e5b13b218a4")
-		)
-		(instances
-			(project ""
-				(path "/c29659fd-9e8d-4714-a690-4e74e6e849c2"
-					(reference "Y1")
 					(unit 1)
 				)
 			)
@@ -7187,6 +7136,83 @@
 			(project "uPTP"
 				(path "/c29659fd-9e8d-4714-a690-4e74e6e849c2"
 					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "uPTP:X50328MSB2GI")
+		(at 254 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6a2af705-e2cd-4e4d-8a8d-10aa72ba879a")
+		(property "Reference" "X1"
+			(at 254 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "X50328MSB2GI"
+			(at 254 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "uPTP:CRYSTAL-SMD_L5.0-W3.2"
+			(at 254 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/SMD-Crystals_YSX530GA-8MHZ-20PF-10PPM-40-85_C115962.html"
+			(at 254 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "8MHz Crystal Oscillator (Basic Part)"
+			(at 255.27 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C115962"
+			(at 254 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8cdbf107-8d04-4737-b959-f0db0f7e0696")
+		)
+		(pin "2"
+			(uuid "6c243c46-ffe0-422f-98e3-6a0193996948")
+		)
+		(instances
+			(project ""
+				(path "/c29659fd-9e8d-4714-a690-4e74e6e849c2"
+					(reference "X1")
 					(unit 1)
 				)
 			)
@@ -7990,7 +8016,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 248.92 104.14 0)
+		(at 246.38 104.14 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7999,7 +8025,7 @@
 		(dnp no)
 		(uuid "96deca3e-19c4-4d03-b9ac-3eda4671fd88")
 		(property "Reference" "C7"
-			(at 245.11 102.8699 0)
+			(at 242.57 102.8699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8008,7 +8034,7 @@
 			)
 		)
 		(property "Value" "20p"
-			(at 245.11 105.4099 0)
+			(at 242.57 105.4099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8017,7 +8043,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 247.9548 107.95 0)
+			(at 245.4148 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8026,7 +8052,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 248.92 104.14 0)
+			(at 246.38 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8035,7 +8061,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 248.92 104.14 0)
+			(at 246.38 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
