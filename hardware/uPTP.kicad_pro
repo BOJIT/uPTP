@@ -677,6 +677,14 @@
     [
       "3d1dab4d-adff-43b7-a36b-e11360ab0d63",
       "Power"
+    ],
+    [
+      "8b18d07b-35a1-429b-b7b2-9d337819a16d",
+      "MCU"
+    ],
+    [
+      "a01e8bf2-a35e-4434-a60c-3e16f0eed29e",
+      "USB"
     ]
   ],
   "text_variables": {}
