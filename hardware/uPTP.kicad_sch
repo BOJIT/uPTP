@@ -4540,6 +4540,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C965555"
+			(at 254 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3c299080-ac51-4190-9293-7a4d359c13ee")
 		)

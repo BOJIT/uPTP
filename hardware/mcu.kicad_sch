@@ -2980,10 +2980,6 @@
 		(uuid "19d61830-dfc1-4c11-8423-d328c671c587")
 	)
 	(no_connect
-		(at 154.94 101.6)
-		(uuid "24aec361-e51f-4814-b4e8-ee1c2918c5bb")
-	)
-	(no_connect
 		(at 124.46 121.92)
 		(uuid "2cb4ca3f-702b-4e4c-8c8d-02f7cbbf2fb2")
 	)
@@ -3036,10 +3032,6 @@
 		(uuid "707f3075-68fb-40d6-b412-92ab8864aa80")
 	)
 	(no_connect
-		(at 154.94 104.14)
-		(uuid "74b35a39-d358-4fa5-ad62-b9b5e466d592")
-	)
-	(no_connect
 		(at 124.46 111.76)
 		(uuid "7a4b9e8e-9498-4a4a-a9bc-936b431b6556")
 	)
@@ -3050,6 +3042,10 @@
 	(no_connect
 		(at 154.94 106.68)
 		(uuid "8e781b2e-59fd-458f-9679-ac78f79ce970")
+	)
+	(no_connect
+		(at 124.46 88.9)
+		(uuid "905ad71c-d8e4-4917-92b7-95f0817254d4")
 	)
 	(no_connect
 		(at 124.46 134.62)
@@ -3108,6 +3104,10 @@
 		(uuid "c44acadf-07ca-4bc9-b8ac-bfb29291016d")
 	)
 	(no_connect
+		(at 124.46 91.44)
+		(uuid "ceed081c-ea12-4b7a-ad1e-a51ba9d229cf")
+	)
+	(no_connect
 		(at 154.94 78.74)
 		(uuid "fab6b5c8-6c1f-408d-bae7-34f470630a84")
 	)
@@ -3150,16 +3150,6 @@
 			(type default)
 		)
 		(uuid "114cfc7b-5469-422c-bec1-b00cab5911bb")
-	)
-	(wire
-		(pts
-			(xy 101.6 88.9) (xy 124.46 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "13361cd0-bac5-4127-9236-b1d70330df52")
 	)
 	(wire
 		(pts
@@ -3220,6 +3210,16 @@
 			(type default)
 		)
 		(uuid "28cde86c-6069-4197-b037-970392731130")
+	)
+	(wire
+		(pts
+			(xy 154.94 104.14) (xy 177.8 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29092649-bc20-4ec3-8817-0b24e5b752b7")
 	)
 	(wire
 		(pts
@@ -3340,6 +3340,16 @@
 			(type default)
 		)
 		(uuid "428b6a93-38b0-4731-b68a-db86d9d93ce3")
+	)
+	(wire
+		(pts
+			(xy 154.94 101.6) (xy 177.8 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "442e94bc-ee3a-46d7-82f5-0cbb0c339d61")
 	)
 	(wire
 		(pts
@@ -3610,16 +3620,6 @@
 			(type default)
 		)
 		(uuid "a4510189-a76d-49fb-9c26-8c76ce675b56")
-	)
-	(wire
-		(pts
-			(xy 101.6 91.44) (xy 124.46 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b22d12f2-199f-4fe7-b7a3-4c8fd3e394a4")
 	)
 	(wire
 		(pts
@@ -4073,12 +4073,12 @@
 	)
 	(hierarchical_label "NMEA_UART_TX"
 		(shape output)
-		(at 101.6 88.9 180)
+		(at 177.8 101.6 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "4af6b6be-e846-4fb1-a904-03a3ef86e6e5")
 	)
@@ -4106,12 +4106,12 @@
 	)
 	(hierarchical_label "NMEA_UART_RX"
 		(shape input)
-		(at 101.6 91.44 180)
+		(at 177.8 104.14 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "5c8d5d64-a486-4a30-b2b3-66a43f93ed32")
 	)

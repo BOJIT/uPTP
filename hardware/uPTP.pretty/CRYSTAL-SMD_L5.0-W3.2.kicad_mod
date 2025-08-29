@@ -256,4 +256,15 @@
 			(xyz 0 0 0)
 		)
 	)
+	(model "${KIPRJMOD}/uPTP.3dshapes/CRYSTAL-SMD_L5.0-W3.2.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )
