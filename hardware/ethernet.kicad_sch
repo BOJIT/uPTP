@@ -5344,7 +5344,7 @@
 		)
 		(uuid "22b0db5b-379c-4796-91c8-2ac234bb212c")
 	)
-	(label "ETH_RX1"
+	(label "ETH_TX2"
 		(at 92.71 63.5 180)
 		(effects
 			(font
@@ -5409,7 +5409,7 @@
 		)
 		(uuid "6eafff2b-e85d-47ba-8de7-ee74c730bbe1")
 	)
-	(label "ETH_TX1"
+	(label "ETH_RX1"
 		(at 21.59 63.5 0)
 		(effects
 			(font
@@ -5473,6 +5473,17 @@
 		)
 		(uuid "7a728806-e696-4e1c-badb-7f5630e3a357")
 	)
+	(label "ETH_C_MID"
+		(at 182.88 40.64 0)
+		(effects
+			(font
+				(size 0.508 0.508)
+				(color 132 132 132 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "9717a02a-9bc1-4703-8660-b627a6bf214b")
+	)
 	(label "ETH_TX2"
 		(at 63.5 137.16 0)
 		(effects
@@ -5517,7 +5528,7 @@
 		)
 		(uuid "bfbf191f-b2a0-41cd-86f4-36d3e8aef7e6")
 	)
-	(label "ETH_TX2"
+	(label "ETH_TX1"
 		(at 54.61 63.5 180)
 		(effects
 			(font
