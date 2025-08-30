@@ -54,16 +54,16 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
-          "extra_footprint|166250000|102500000|8ff69dfe-e1d9-4274-aab1-a7070fa6dfe7|00000000-0000-0000-0000-000000000000",
-          ""
+          "lib_footprint_mismatch|132635000|113250000|8ee99e3d-df2c-45c0-8d7b-0157d84d12bb|00000000-0000-0000-0000-000000000000",
+          "3D Model Added"
         ],
         [
           "lib_footprint_mismatch|137500000|111500000|49fa8f0d-11f6-4c84-a6bf-4586aa644bb9|00000000-0000-0000-0000-000000000000",
           "Added 3D Model to Core Library"
         ],
         [
-          "net_conflict|138500000|103000000|a4c2417f-7aa2-4a1e-b4ec-213e772e49f8|00000000-0000-0000-0000-000000000000",
-          "Pin 69 changed to Pin 0 (Exposed Pad) in Footprint"
+          "lib_footprint_mismatch|166233938|102509964|8ff69dfe-e1d9-4274-aab1-a7070fa6dfe7|00000000-0000-0000-0000-000000000000",
+          "Silkscreen Cutout Added"
         ],
         [
           "text_thickness|137000000|89500000|377af752-3917-41c2-bb51-d67ad807f6ac|00000000-0000-0000-0000-000000000000",

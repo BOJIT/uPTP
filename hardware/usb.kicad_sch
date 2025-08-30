@@ -1807,6 +1807,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C1525"
+			(at 171.45 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0d5fec55-5a6d-409c-8ad5-024bc7fc7d74")
 		)
@@ -2008,6 +2017,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C25905"
+			(at 127 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e94722ef-e86c-465e-88a8-9faeccfa5cfa")
 		)
@@ -2135,6 +2153,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 139.7 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C25905"
 			(at 139.7 118.11 0)
 			(effects
 				(font

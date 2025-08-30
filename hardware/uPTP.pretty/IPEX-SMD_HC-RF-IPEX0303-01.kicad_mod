@@ -1,12 +1,12 @@
 (footprint "IPEX-SMD_HC-RF-IPEX0303-01"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 -3.175 0)
 		(layer "F.SilkS")
-		(uuid "af22b1d3-63d2-4cb8-b57c-33bdfd22b3fd")
+		(uuid "eacc472f-162b-4ffc-917d-24f874608860")
 		(effects
 			(font
 				(size 1 1)
@@ -17,22 +17,10 @@
 	(property "Value" "IPEX-SMD_HC-RF-IPEX0303-01"
 		(at 0 3.175 0)
 		(layer "F.Fab")
-		(uuid "f9293ec0-1a94-4398-89e8-7b75b24e4e2d")
+		(uuid "6ed0ddbc-e10a-4b28-8325-4e871528a81c")
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "f1236525-21a7-4cb5-82bf-dc87ba391752")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -41,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "bff82439-3e29-4c6a-9a98-550bd0c14966")
+		(uuid "922b8a3d-bc50-4f95-99e7-ee189a35a633")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -53,7 +41,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "c5f31844-ff36-46f1-9a6a-80caa542b234")
+		(uuid "cbc37dd4-89de-4dd7-b4ad-bcd01f273056")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -239,7 +227,7 @@
 			(width 0.4)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "97e2dab5-8274-4f62-b036-577dbd70899e")
 	)
@@ -250,7 +238,7 @@
 			(width 0.4)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "Cmts.User")
 		(uuid "10c6be2c-a137-45d1-bc1d-e4287a5cab3b")
 	)
@@ -261,7 +249,7 @@
 			(width 0.06)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.Fab")
 		(uuid "66a0cf76-c16d-4c68-9cb9-6b89c08b64af")
 	)
@@ -277,29 +265,24 @@
 		)
 	)
 	(pad "1" smd rect
-		(at 0 -1.5 180)
-		(size 1 1.05)
-		(layers "F.Cu" "F.Paste" "F.Mask")
-		(uuid "f6aea64b-1f74-4484-8995-3f8e3e9b34c0")
-	)
-	(pad "1" smd rect
 		(at 0 1.5)
 		(size 1 1.05)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "df397a29-e06a-41b6-9970-fadd108d645b")
 	)
 	(pad "2" smd rect
 		(at -1.47 0)
 		(size 1.05 2.2)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "3b15ff9e-66c0-4ace-81e8-effca95034d6")
 	)
 	(pad "2" smd rect
 		(at 1.47 0)
 		(size 1.05 2.2)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "268faacd-2d1d-4f8f-98f6-ad005ef74935")
 	)
+	(embedded_fonts no)
 	(model "${KIPRJMOD}/uPTP.3dshapes/IPEX-SMD_HC-RF-IPEX0303-01.step"
 		(offset
 			(xyz 0 0 0)
