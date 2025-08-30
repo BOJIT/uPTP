@@ -1,5 +1,6 @@
 .vscode/settings.json
 .vscode/cpp.code-snippets
+.DS_Store
 
 # KiCAD
 
@@ -38,4 +39,4 @@ __pycache__/
 *$py.class
 *.egg-info
 
-hardware/production/
+!hardware/production/*.zip
