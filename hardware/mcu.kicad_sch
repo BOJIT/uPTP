@@ -4365,7 +4365,7 @@
 		(at 88.9 67.31 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "18257888-b28a-4ef9-878c-46d9ff746925")
@@ -4915,7 +4915,7 @@
 		(at 101.6 109.22 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5483,7 +5483,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "?"
+		(property "Value" "10"
 			(at 115.57 118.11 0)
 			(effects
 				(font
@@ -5958,7 +5958,7 @@
 		(at 114.3 81.28 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "ae751a42-f2f3-478c-bd9d-93cd438ced7e")
@@ -6022,7 +6022,7 @@
 		(at 114.3 83.82 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "af8f9401-6b7c-442d-87fd-142d40561a92")
