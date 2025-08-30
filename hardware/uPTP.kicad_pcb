@@ -8141,7 +8141,7 @@
 			(net 5 "GND")
 			(pinfunction "Ext")
 			(pintype "passive")
-			(uuid "a6ee91f1-9d5b-49cb-a668-1499c1a1ee75")
+			(uuid "3191692f-259e-4c32-8e65-499545a01d98")
 		)
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/uPTP.3dshapes/IPEX-SMD_HC-RF-IPEX0303-01.step"
