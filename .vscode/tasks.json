@@ -8,19 +8,19 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "command": "${workspaceFolder}/.venv/bin/west build -b bojit_uPTP_V1",
+            "command": "${workspaceFolder}/.venv/bin/west build",
             "problemMatcher": [
                 "$gcc"
             ],
             "options": {
                 "cwd": "${workspaceFolder}/software/app",
                 "statusbar": {
-                    "label": "$(beaker) Build Active Project"
+                    "label": "$(beaker) Build Project"
                 }
             }
         },
         {
-            "label": "West Rebuild",
+            "label": "West Clean Build (EVK)",
             "type": "shell",
             "group": {
                 "kind": "build",
@@ -33,7 +33,25 @@
             "options": {
                 "cwd": "${workspaceFolder}/software/app",
                 "statusbar": {
-                    "label": "$(wand) Clean & Rebuild Project"
+                    "label": "$(wand) Build for EVK"
+                }
+            }
+        },
+        {
+            "label": "West Clean Build (uPTP)",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "rm -rf ./build && ${workspaceFolder}/.venv/bin/west build -b uptp_v1 -- -DBOARD_ROOT=.",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/software/app",
+                "statusbar": {
+                    "label": "$(wand) Build for uPTP Hardware"
                 }
             }
         },

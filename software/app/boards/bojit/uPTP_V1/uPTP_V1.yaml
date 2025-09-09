@@ -1,4 +1,4 @@
-identifier: bojit_uPTP_V1
+identifier: bojit_uptp_v1
 name: uPTP First Hardware Revision
 type: mcu
 arch: riscv
