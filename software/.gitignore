@@ -1,2 +1,4 @@
 .venv
+.west
 build/
+deps/
