@@ -1,0 +1,6 @@
+board:
+  name: uPTP_V1
+  full_name: bojit_uPTP_V1
+  vendor: bojit
+  socs:
+    - name: ch32v307

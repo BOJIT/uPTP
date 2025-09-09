@@ -17,7 +17,7 @@
 /*----------------------------------- State ----------------------------------*/
 
 // Settings
-static const int32_t sleep_time_ms = 50; // Target 20 FPS
+static const int32_t sleep_time_ms = 500;
 
 /*------------------------------ Private Functions ---------------------------*/
 
@@ -27,8 +27,8 @@ static const int32_t sleep_time_ms = 50; // Target 20 FPS
 
 int main(void)
 {
-    while (1)
-    {
-        k_msleep(sleep_time_ms);
-    }
+	while (1) {
+		k_msleep(sleep_time_ms);
+		printk("Hello World! %u\n", k_uptime_get_32());
+	}
 }

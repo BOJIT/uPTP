@@ -1,0 +1,55 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "West Build",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "${workspaceFolder}/.venv/bin/west build -b bojit_uPTP_V1",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/software/app",
+                "statusbar": {
+                    "label": "$(beaker) Build Active Project"
+                }
+            }
+        },
+        {
+            "label": "West Rebuild",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "rm -rf ./build && ${workspaceFolder}/.venv/bin/west build -b ch32v307evt",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/software/app",
+                "statusbar": {
+                    "label": "$(wand) Clean & Rebuild Project"
+                }
+            }
+        },
+        {
+            "label": "West Flash",
+            "type": "shell",
+            "command": "wlink --chip CH32V30X flash --address 0x08000000 ./build/zephyr/zephyr.bin",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/software/app",
+                "statusbar": {
+                    "label": "$(arrow-right) Flash Project"
+                }
+            }
+        }
+    ]
+}

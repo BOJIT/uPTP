@@ -1,0 +1,11 @@
+identifier: bojit_uPTP_V1
+name: uPTP First Hardware Revision
+type: mcu
+arch: riscv
+toolchain:
+  - cross-compile
+  - zephyr
+ram: 32
+flash: 256
+supported:
+  - gpio
