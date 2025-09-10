@@ -1,0 +1,2 @@
+config BOARD_UPTP_V1
+	select SOC_CH32V307

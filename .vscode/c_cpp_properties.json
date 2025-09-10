@@ -1,0 +1,9 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "uPTP",
+            "compileCommands": "${workspaceFolder}/software/app/build/compile_commands.json"
+        }
+    ]
+}

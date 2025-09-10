@@ -5,11 +5,12 @@ manifest:
     - name: zephyr
       revision: v4.2.0
       url: https://github.com/zephyrproject-rtos/zephyr
+      # url: git@github.com:BOJIT/zephyr.git
       import:
         file: west.yml
         path-prefix: deps
         name-allowlist:
-          - cmsis
+          - hal_wch
 
   self:
     path: app

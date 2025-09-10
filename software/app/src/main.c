@@ -11,13 +11,16 @@
 /*--------------------------------- Includes ---------------------------------*/
 
 #include <zephyr/kernel.h>
+#include <zephyr/logging/log.h>
 
 /*---------------------------- Macros & Constants ----------------------------*/
+
+LOG_MODULE_REGISTER(main, CONFIG_LOG_DEFAULT_LEVEL);
 
 /*----------------------------------- State ----------------------------------*/
 
 // Settings
-static const int32_t sleep_time_ms = 50; // Target 20 FPS
+static const int32_t sleep_time_ms = 500;
 
 /*------------------------------ Private Functions ---------------------------*/
 
@@ -27,8 +30,14 @@ static const int32_t sleep_time_ms = 50; // Target 20 FPS
 
 int main(void)
 {
-    while (1)
-    {
-        k_msleep(sleep_time_ms);
-    }
+	int i = 0;
+
+	while (1) {
+		i++;
+		LOG_INF("Hello World! %u", k_uptime_get_32());
+		if (i % 10 == 0) {
+			LOG_WRN("Random Panic!");
+		}
+		k_msleep(sleep_time_ms);
+	}
 }
