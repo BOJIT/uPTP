@@ -68,6 +68,20 @@
                     "label": "$(arrow-right) Flash Project"
                 }
             }
+        },
+        {
+            "label": "Start OpenOCD",
+            "type": "shell",
+            "command": "openocd_wch -f ./boards/bojit/uptp_v1/support/openocd.cfg",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/software/app",
+                "statusbar": {
+                    "label": "$(bug) Start OpenOCD"
+                }
+            }
         }
     ]
 }
