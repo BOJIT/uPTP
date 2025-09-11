@@ -1,90 +1,90 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "West Clean Build (EVK)",
-            "type": "shell",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "command": "rm -rf ./build && ${workspaceFolder}/.venv/bin/west build -b ch32v307evt",
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}/software/app",
-                "statusbar": {
-                    "label": "$(wand) Build for EVK"
-                }
-            }
-        },
-        {
-            "label": "West Clean Build (uPTP)",
-            "type": "shell",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "command": "rm -rf ./build && ${workspaceFolder}/.venv/bin/west build -b uptp_v1 -- -DBOARD_ROOT=.",
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}/software/app",
-                "statusbar": {
-                    "label": "$(wand) Build for uPTP Hardware"
-                }
-            }
-        },
-        {
-            "label": "West Build",
-            "type": "shell",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "command": "${workspaceFolder}/.venv/bin/west build",
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}/software/app",
-                "statusbar": {
-                    "label": "$(beaker) Build Project"
-                }
-            }
-        },
-        {
-            "label": "West Flash",
-            "type": "shell",
-            "command": "wlink --chip CH32V30X flash --address 0x08000000 ./build/zephyr/zephyr.bin",
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "dependsOn": [
-                "West Build"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}/software/app",
-                "statusbar": {
-                    "label": "$(arrow-right) Flash Project"
-                }
-            }
-        },
-        {
-            "label": "Start OpenOCD",
-            "type": "shell",
-            "command": "openocd_wch -f ./boards/bojit/uptp_v1/support/openocd.cfg",
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}/software/app",
-                "statusbar": {
-                    "label": "$(bug) Start OpenOCD"
-                }
-            }
-        }
-    ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "West Clean Build (EVK)",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"command": "rm -rf ./build && ${workspaceFolder}/.venv/bin/west build -b ch32v307evt -- -DBOARD_ROOT=.",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/software/app",
+				"statusbar": {
+					"label": "$(wand) Build for EVK"
+				}
+			}
+		},
+		{
+			"label": "West Clean Build (uPTP)",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"command": "rm -rf ./build && ${workspaceFolder}/.venv/bin/west build -b uptp_v1 -- -DBOARD_ROOT=.",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/software/app",
+				"statusbar": {
+					"label": "$(wand) Build for uPTP Hardware"
+				}
+			}
+		},
+		{
+			"label": "West Build",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"command": "${workspaceFolder}/.venv/bin/west build",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/software/app",
+				"statusbar": {
+					"label": "$(beaker) Build Project"
+				}
+			}
+		},
+		{
+			"label": "West Flash",
+			"type": "shell",
+			"command": "wlink --chip CH32V30X flash --address 0x08000000 ./build/zephyr/zephyr.bin",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"dependsOn": [
+				"West Build"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/software/app",
+				"statusbar": {
+					"label": "$(arrow-right) Flash Project"
+				}
+			}
+		},
+		{
+			"label": "Start OpenOCD",
+			"type": "shell",
+			"command": "openocd_wch -f ./boards/bojit/uptp_v1/support/openocd.cfg",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/software/app",
+				"statusbar": {
+					"label": "$(bug) Start OpenOCD"
+				}
+			}
+		}
+	]
 }
