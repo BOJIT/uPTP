@@ -13,7 +13,7 @@ Hardware
 ********
 
 The QingKe V4F 32-bit RISC-V processor of the SCDZ CH32V307EVT is clocked by an external
-32 MHz crystal or the internal 8 MHz oscillator and runs with 127 MHz.
+8 MHz crystal or the internal 8 MHz oscillator and runs with 127 MHz.
 The CH32V307 SoC features 8 USART, 5 GPIO banks, 3 SPI, 2 I2C, 2 ADC, RTC,
 2 CAN, USB Host/Device, Ethernet and 4 OPA.
 
@@ -51,7 +51,8 @@ following pins on the PCB (best way is to use a ribbon cable):
 
 * VCC = VCC (do not power the board from the USB port at the same time)
 * GND = GND
-* SWIO = PA13
+* SWDIO = PA13
+* SWCLK = PA14
 
 Flashing
 ========
