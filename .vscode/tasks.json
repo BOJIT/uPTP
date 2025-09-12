@@ -38,6 +38,24 @@
 			}
 		},
 		{
+			"label": "West Clean Build (Nucleo)",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"command": "rm -rf ./build && ${workspaceFolder}/.venv/bin/west build -b nucleo_f767zi_custom -- -DBOARD_ROOT=.",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/software/app",
+				"statusbar": {
+					"label": "$(wand) Build for Nucleo F767"
+				}
+			}
+		},
+		{
 			"label": "West Build",
 			"type": "shell",
 			"group": {
