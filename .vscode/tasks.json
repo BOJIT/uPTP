@@ -74,9 +74,26 @@
 			}
 		},
 		{
-			"label": "West Flash",
+			"label": "West Flash (WCH)",
 			"type": "shell",
 			"command": "wlink --chip CH32V30X flash --address 0x08000000 ./build/zephyr/zephyr.bin",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"dependsOn": [
+				"West Build"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/software/app",
+				"statusbar": {
+					"label": "$(arrow-right) Flash WCH Project"
+				}
+			}
+		},
+		{
+			"label": "West Flash",
+			"type": "shell",
+			"command": "${workspaceFolder}/.venv/bin/west flash",
 			"problemMatcher": [
 				"$gcc"
 			],
