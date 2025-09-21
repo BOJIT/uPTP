@@ -2,4 +2,4 @@ cmake_minimum_required(VERSION 3.20.0)
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 
 project(uPTP)
-target_sources(app PRIVATE src/main.c src/threads/net_mgr.c src/threads/nmea_mgr.c)
+target_sources(app PRIVATE src/main.c src/threads/nmea_mgr.c)
