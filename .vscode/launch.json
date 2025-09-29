@@ -18,6 +18,28 @@
                     "ignoreFailures": true
                 }
             ]
+        },
+        {
+            "name": "Debug (OpenOCD)",
+            "cwd": "${workspaceFolder}/software/app",
+            "executable": "./build/zephyr/zephyr.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "serverpath": "openocd_wch",
+            // "serverArgs": [
+            //     "./boards/bojit/uptp_v1/support/openocd.cfg"
+            // ],
+            "armToolchainPath": "${env:HOME}/zephyr-sdk-0.17.0/riscv64-zephyr-elf/bin/",
+            "toolchainPrefix": "riscv64-zephyr-elf",
+            "interface": "swd",
+            "device": "ch32v307",
+            "runToEntryPoint": "main",
+            "rtos": "Zephyr",
+            "svdFile": "${workspaceFolder}/misc/ch32v307.svd",
+            "configFiles": [
+                "./boards/bojit/uptp_v1/support/openocd.cfg"
+            ],
         }
     ]
 }
