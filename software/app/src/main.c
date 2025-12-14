@@ -44,9 +44,9 @@ int main(void)
 
 	while (1) {
 		i++;
-		LOG_INF("Hello World! %u", k_uptime_get_32());
+		// LOG_INF("Hello World! %u", k_uptime_get_32());
 		if (i % 10 == 0) {
-			LOG_WRN("Random Panic!");
+			// LOG_WRN("Random Panic!");
 		}
 		k_msleep(sleep_time_ms);
 	}
