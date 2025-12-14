@@ -51,3 +51,22 @@
 	pinctrl-0 = <&usart4_default>;
 	pinctrl-names = "default";
 };
+
+&mac {
+	status = "okay";
+	pinctrl-0 = <&mac_default>;
+	pinctrl-names = "default";
+	phy-connection-type = "internal";
+	phy-handle = <&eth_phy>;
+};
+
+&mdio {
+	status = "okay";
+	pinctrl-0 = <&mdio_default>;
+	pinctrl-names = "default";
+
+	eth_phy: ethernet-phy@0 {
+		compatible = "ethernet-phy";
+		reg = <0x00>;
+	};
+};
