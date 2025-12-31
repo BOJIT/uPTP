@@ -35,6 +35,7 @@
 			gpios = <&gpiod 1 GPIO_ACTIVE_LOW>;
 		};
 	};
+
 	buttons {
 		compatible = "gpio-keys";
 
@@ -79,6 +80,10 @@
 	current-speed = <115200>;
 	pinctrl-0 = <&usart1_default>;
 	pinctrl-names = "default";
+};
+
+&rng {
+	status = "okay";
 };
 
 &mac {

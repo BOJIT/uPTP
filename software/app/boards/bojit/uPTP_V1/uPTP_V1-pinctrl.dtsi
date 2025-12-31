@@ -1,11 +1,19 @@
 /*
- * Copyright (c) 2025 Thomas Boje
+ * Copyright (c) 2025 James Bennion-Pedley
  * SPDX-License-Identifier: Apache-2.0
  */
 
 #include <zephyr/dt-bindings/pinctrl/ch32v20x_30x-pinctrl.h>
 
 &pinctrl {
+	spi1_default: spi1_default {
+		group1 {
+			pinmux = <SPI1_MOSI_PA7_0>;
+			drive-push-pull;
+			slew-rate = "max-speed-10mhz";
+		};
+	};
+
 	usart4_default: usart4_default {
 		group1 {
 			pinmux = <CH32V20X_V30X_PINMUX_DEFINE(PC, 10, USART4, 0)>;

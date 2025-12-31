@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025 Thomas Boje
+ * Copyright (c) 2025 James Bennion-Pedley
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -7,6 +7,7 @@
 
 #include <wch/ch32v307/ch32v307wc.dtsi>
 #include <zephyr/dt-bindings/gpio/gpio.h>
+#include <zephyr/dt-bindings/led/led.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include "uptp_v1-pinctrl.dtsi"
 
@@ -50,6 +51,28 @@
 	current-speed = <115200>;
 	pinctrl-0 = <&usart4_default>;
 	pinctrl-names = "default";
+};
+
+&spi1 {
+	status = "okay";
+	pinctrl-0 = <&spi1_default>;
+	pinctrl-names = "default";
+
+	led_strip: ws2812@0 {
+		compatible = "worldsemi,ws2812-spi";
+		status = "okay";
+		reg = <0>;
+		spi-cpha;
+		spi-one-frame = <0xf0>;  /* 625 ns high and 625 ns low */
+		spi-zero-frame = <0xc0>; /* 312.5 ns high and 937.5 ns low */
+		spi-max-frequency = <2400000>;
+		chain-length = <2>;
+		color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+	};
+};
+
+&rng {
+	status = "okay";
 };
 
 &mac {

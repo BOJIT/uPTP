@@ -10,6 +10,7 @@
 
 /*--------------------------------- Includes ---------------------------------*/
 
+#include <zephyr/drivers/led_strip.h>
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 
@@ -19,9 +20,9 @@
 
 LOG_MODULE_REGISTER(main, CONFIG_LOG_DEFAULT_LEVEL);
 
-/*----------------------------------- State ----------------------------------*/
+#define LED_STRIP_NODE DT_NODELABEL(led_strip)
 
-static const int32_t sleep_time_ms = 500;
+/*----------------------------------- State ----------------------------------*/
 
 // K_THREAD_STACK_DEFINE(m_net_mgr_stack, 2048);
 // struct k_thread m_net_mgr_thread;
@@ -34,20 +35,28 @@ static const int32_t sleep_time_ms = 500;
 
 int main(void)
 {
-	// net_mgr_init();
+	static const struct device *strip = DEVICE_DT_GET_OR_NULL(LED_STRIP_NODE);
 
+	struct led_rgb colour = {
+		.r = 0x50,
+		.g = 0x00,
+		.b = 0x00,
+	};
+
+	if (!strip || !device_is_ready(strip)) {
+		LOG_WRN("LED strip not ready");
+	}
+
+	if (strip) {
+		led_strip_update_rgb(strip, &colour, 1);
+	}
+
+	// net_mgr_init();
 	// k_thread_create(&m_net_mgr_thread, m_net_mgr_stack,
 	// K_THREAD_STACK_SIZEOF(m_net_mgr_stack), 		net_mgr_thread, NULL, NULL, NULL, 5,
 	// 0, K_NO_WAIT);
 
-	int i = 0;
-
 	while (1) {
-		i++;
-		// LOG_INF("Hello World! %u", k_uptime_get_32());
-		if (i % 10 == 0) {
-			// LOG_WRN("Random Panic!");
-		}
-		k_msleep(sleep_time_ms);
+		k_msleep(1000);
 	}
 }
