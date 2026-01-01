@@ -6,6 +6,15 @@
 #include <zephyr/dt-bindings/pinctrl/ch32v20x_30x-pinctrl.h>
 
 &pinctrl {
+	spi1_default: spi1_default {
+		group1 {
+			pinmux = <SPI1_MOSI_PA7_0>;
+			output-high;
+			drive-push-pull;
+			slew-rate = "max-speed-50mhz";
+		};
+	};
+
 	usart1_default: usart1_default {
 		group1 {
 			pinmux = <USART1_TX_PA9_0>;

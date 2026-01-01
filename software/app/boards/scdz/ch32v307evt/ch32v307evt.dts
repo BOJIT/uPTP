@@ -8,6 +8,7 @@
 #include <wch/ch32v307/ch32v307vc.dtsi>
 #include <zephyr/dt-bindings/gpio/gpio.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <zephyr/dt-bindings/led/led.h>
 #include "ch32v307evt-pinctrl.dtsi"
 
 / {
@@ -29,7 +30,7 @@
 		 * board to a suitable GPIO pin (like PD1) and then change
 		 * this status to "okay".
 		 */
-		status = "disabled";
+		status = "okay";
 
 		red_led: led0 {
 			gpios = <&gpiod 1 GPIO_ACTIVE_LOW>;
@@ -80,6 +81,24 @@
 	current-speed = <115200>;
 	pinctrl-0 = <&usart1_default>;
 	pinctrl-names = "default";
+};
+
+&spi1 {
+	status = "okay";
+	pinctrl-0 = <&spi1_default>;
+	pinctrl-names = "default";
+
+	led_strip: ws2812@0 {
+		compatible = "worldsemi,ws2812-spi";
+		status = "okay";
+		reg = <0>;
+		spi-cpha;
+		spi-one-frame = <0xf0>;  /* 1100ns HIGH */
+		spi-zero-frame = <0x80>; /* 460ns HIGH */
+		spi-max-frequency = <4600000>;
+		chain-length = <2>;
+		color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+	};
 };
 
 &rng {

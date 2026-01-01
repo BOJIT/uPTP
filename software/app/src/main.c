@@ -39,8 +39,8 @@ int main(void)
 
 	struct led_rgb colour = {
 		.r = 0x50,
-		.g = 0x00,
-		.b = 0x00,
+		.g = 0x60,
+		.b = 0x60,
 	};
 
 	if (!strip || !device_is_ready(strip)) {
@@ -57,6 +57,10 @@ int main(void)
 	// 0, K_NO_WAIT);
 
 	while (1) {
+		if (strip) {
+			led_strip_update_rgb(strip, &colour, 1);
+			LOG_INF("Updated Strip");
+		}
 		k_msleep(1000);
 	}
 }

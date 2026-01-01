@@ -6,7 +6,7 @@
             "request": "launch",
             "program": "./build/zephyr/zephyr.elf",
             "args": [],
-            "stopAtEntry": true,
+            "stopAtEntry": false,
             "cwd": "${workspaceFolder}/software/app",
             "MIMode": "gdb",
             "miDebuggerPath": "${env:HOME}/zephyr-sdk-0.17.0/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gdb",

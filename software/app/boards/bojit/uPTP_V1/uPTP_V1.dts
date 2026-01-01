@@ -63,9 +63,9 @@
 		status = "okay";
 		reg = <0>;
 		spi-cpha;
-		spi-one-frame = <0xf0>;  /* 625 ns high and 625 ns low */
-		spi-zero-frame = <0xc0>; /* 312.5 ns high and 937.5 ns low */
-		spi-max-frequency = <2400000>;
+		spi-one-frame = <0xf0>;  /* 1100ns HIGH */
+		spi-zero-frame = <0x80>; /* 460ns HIGH */
+		spi-max-frequency = <4600000>;
 		chain-length = <2>;
 		color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
 	};

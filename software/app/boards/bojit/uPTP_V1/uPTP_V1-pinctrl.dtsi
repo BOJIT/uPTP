@@ -9,8 +9,9 @@
 	spi1_default: spi1_default {
 		group1 {
 			pinmux = <SPI1_MOSI_PA7_0>;
+			output-high;
 			drive-push-pull;
-			slew-rate = "max-speed-10mhz";
+			slew-rate = "max-speed-50mhz";
 		};
 	};
 
