@@ -10,6 +10,7 @@
 
 /*--------------------------------- Includes ---------------------------------*/
 
+#include <errno.h>
 #include <zephyr/drivers/led_strip.h>
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
@@ -21,6 +22,24 @@
 LOG_MODULE_REGISTER(main, CONFIG_LOG_DEFAULT_LEVEL);
 
 #define LED_STRIP_NODE DT_NODELABEL(led_strip)
+
+struct led_rgb m_colours[3] = {
+	{
+		.r = 0x50,
+		.g = 0x00,
+		.b = 0x00,
+	},
+	{
+		.r = 0x00,
+		.g = 0x50,
+		.b = 0x00,
+	},
+	{
+		.r = 0x00,
+		.g = 0x00,
+		.b = 0x50,
+	},
+};
 
 /*----------------------------------- State ----------------------------------*/
 
@@ -37,18 +56,9 @@ int main(void)
 {
 	static const struct device *strip = DEVICE_DT_GET_OR_NULL(LED_STRIP_NODE);
 
-	struct led_rgb colour = {
-		.r = 0x50,
-		.g = 0x60,
-		.b = 0x60,
-	};
-
 	if (!strip || !device_is_ready(strip)) {
-		LOG_WRN("LED strip not ready");
-	}
-
-	if (strip) {
-		led_strip_update_rgb(strip, &colour, 1);
+		LOG_ERR("LED device not ready");
+		return -EIO;
 	}
 
 	// net_mgr_init();
@@ -56,11 +66,13 @@ int main(void)
 	// K_THREAD_STACK_SIZEOF(m_net_mgr_stack), 		net_mgr_thread, NULL, NULL, NULL, 5,
 	// 0, K_NO_WAIT);
 
+	size_t i = 0;
 	while (1) {
 		if (strip) {
-			led_strip_update_rgb(strip, &colour, 1);
-			LOG_INF("Updated Strip");
+			led_strip_update_rgb(strip, &m_colours[i], 1);
+			i = (i + 1) % ARRAY_SIZE(m_colours);
 		}
+
 		k_msleep(1000);
 	}
 }
