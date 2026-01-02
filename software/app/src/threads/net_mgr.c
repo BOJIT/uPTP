@@ -27,68 +27,11 @@
 
 LOG_MODULE_REGISTER(net_mgr, CONFIG_LOG_DEFAULT_LEVEL);
 
-// #define L4_EVENT_MASK (NET_EVENT_L4_CONNECTED | NET_EVENT_L4_DISCONNECTED |
-// NET_EVENT_IPV4_ADDR_ADD)
-#define DEFAULT_PORT 0
+#define DEFAULT_PORT 9595
 
 /*----------------------------------- State ----------------------------------*/
 
-// static struct net_mgmt_event_callback l4_cb;
-// static K_SEM_DEFINE(network_connected, 0,
-// 		    1); // TODO this may need to be sorted to handle disconnects
-
 /*------------------------------ Private Functions ---------------------------*/
-
-// static void print_dhcp_info(struct net_if *iface)
-// {
-// 	for (size_t i = 0; i < NET_IF_MAX_IPV4_ADDR; i++) {
-// 		char buf[NET_IPV4_ADDR_LEN];
-
-// 		if (iface->config.ip.ipv4->unicast[i].ipv4.addr_type != NET_ADDR_DHCP) {
-// 			continue;
-// 		}
-
-// 		LOG_INF("   Address[%d]: %s", net_if_get_by_iface(iface),
-// 			net_addr_ntop(AF_INET,
-// 				      &iface->config.ip.ipv4->unicast[i].ipv4.address.in_addr, buf,
-// 				      sizeof(buf)));
-// 		LOG_INF("    Subnet[%d]: %s", net_if_get_by_iface(iface),
-// 			net_addr_ntop(AF_INET, &iface->config.ip.ipv4->unicast[i].netmask, buf,
-// 				      sizeof(buf)));
-// 		LOG_INF("    Router[%d]: %s", net_if_get_by_iface(iface),
-// 			net_addr_ntop(AF_INET, &iface->config.ip.ipv4->gw, buf, sizeof(buf)));
-// 		LOG_INF("Lease time[%d]: %u seconds", net_if_get_by_iface(iface),
-// 			iface->config.dhcpv4.lease_time);
-// 	}
-// }
-
-// static void l4_event_handler(struct net_mgmt_event_callback *cb, uint64_t event,
-// 			     struct net_if *iface)
-// {
-// 	LOG_INF("Got Event: %llu", event);
-// 	switch (event) {
-// 	case NET_EVENT_L4_CONNECTED:
-// 		LOG_INF("Network connectivity established and IP address assigned");
-// 		k_sem_give(&network_connected);
-// 		break;
-// 	case NET_EVENT_L4_DISCONNECTED:
-// 		break;
-// 	case NET_EVENT_IPV4_ADDR_ADD:
-// 		print_dhcp_info(iface);
-// 		break;
-// 	default:
-// 		break;
-// 	}
-// }
-
-// static void start_dhcpv4_client(struct net_if *iface, void *user_data)
-// {
-// 	ARG_UNUSED(user_data);
-
-// 	LOG_INF("Start on %s: index=%d", net_if_get_device(iface)->name,
-// 		net_if_get_by_iface(iface));
-// 	net_dhcpv4_start(iface);
-// }
 
 static int welcome(int fd)
 {
@@ -96,18 +39,6 @@ static int welcome(int fd)
 
 	return send(fd, msg, sizeof(msg), 0);
 }
-
-// static void wait_for_network(void)
-// {
-// 	net_mgmt_init_event_callback(&l4_cb, l4_event_handler, L4_EVENT_MASK);
-// 	net_mgmt_add_event_callback(&l4_cb);
-// 	conn_mgr_mon_resend_status();
-
-// 	net_if_foreach(start_dhcpv4_client, NULL);
-
-// 	k_sem_take(&network_connected, K_FOREVER);
-// 	LOG_INF("Network Connected");
-// }
 
 static void service(void)
 {
@@ -125,23 +56,8 @@ static void service(void)
 
 	k_msleep(5000);
 
-#if DEFAULT_PORT == 0
-	/* The advanced use case: ephemeral port */
-	// #if defined(CONFIG_NET_IPV6)
-	// 	DNS_SD_REGISTER_SERVICE(uptp, CONFIG_NET_HOSTNAME, "_uptp", "_tcp", "local",
-	// 				DNS_SD_EMPTY_TXT,
-	// 				&((struct sockaddr_in6 *)&server_addr)->sin6_port);
-	// #elif defined(CONFIG_NET_IPV4)
-	DNS_SD_REGISTER_SERVICE(uptp, CONFIG_NET_HOSTNAME, "_uptp", "_tcp", "local",
-				DNS_SD_EMPTY_TXT, &((struct sockaddr_in *)&server_addr)->sin_port);
-// #endif
-#else
-	/* The simple use case: fixed port */
 	DNS_SD_REGISTER_TCP_SERVICE(uptp, CONFIG_NET_HOSTNAME, "_uptp", "local", DNS_SD_EMPTY_TXT,
 				    DEFAULT_PORT);
-#endif
-
-	LOG_WRN("SRV Registered?");
 
 	if (IS_ENABLED(CONFIG_NET_IPV6)) {
 		net_sin6(&server_addr)->sin6_family = AF_INET6;
@@ -239,13 +155,10 @@ int net_mgr_init(void)
 
 void net_mgr_thread(void *arg1, void *arg2, void *arg3)
 {
-	// wait_for_network();
-	// net_if_foreach(start_dhcpv4_client, NULL);
-
-	// service();
+	service();
+	LOG_ERR("DNS-SD Service Terminated Prematurely!");
 
 	while (1) {
-		// LOG_WRN("Second Thread");
 		k_msleep(1000);
 	}
 }
