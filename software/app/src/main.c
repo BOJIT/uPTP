@@ -43,8 +43,8 @@ struct led_rgb m_colours[3] = {
 
 /*----------------------------------- State ----------------------------------*/
 
-// K_THREAD_STACK_DEFINE(m_net_mgr_stack, 2048);
-// struct k_thread m_net_mgr_thread;
+K_THREAD_STACK_DEFINE(m_net_mgr_stack, 2048);
+struct k_thread m_net_mgr_thread;
 
 /*------------------------------ Private Functions ---------------------------*/
 
@@ -61,10 +61,9 @@ int main(void)
 		return -EIO;
 	}
 
-	// net_mgr_init();
-	// k_thread_create(&m_net_mgr_thread, m_net_mgr_stack,
-	// K_THREAD_STACK_SIZEOF(m_net_mgr_stack), 		net_mgr_thread, NULL, NULL, NULL, 5,
-	// 0, K_NO_WAIT);
+	net_mgr_init();
+	k_thread_create(&m_net_mgr_thread, m_net_mgr_stack, K_THREAD_STACK_SIZEOF(m_net_mgr_stack),
+			net_mgr_thread, NULL, NULL, NULL, 5, 0, K_NO_WAIT);
 
 	size_t i = 0;
 	while (1) {
