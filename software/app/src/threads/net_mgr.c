@@ -12,10 +12,14 @@
 
 #include "net_mgr.h"
 
+#include <zephyr/app_version.h>
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 
 #include <zephyr/net/dns_sd.h>
+#include <zephyr/net/hostname.h>
+#include <zephyr/net/net_config.h>
+#include <zephyr/net/net_if.h>
 #include <zephyr/net/socket.h>
 
 #include <zephyr/posix/arpa/inet.h>
@@ -31,11 +35,43 @@ LOG_MODULE_REGISTER(net_mgr, CONFIG_LOG_DEFAULT_LEVEL);
 
 /*----------------------------------- State ----------------------------------*/
 
+static char m_hostname[CONFIG_NET_HOSTNAME_MAX_LEN];
+
+/* clang-format off */
+static char m_txt_buf[64];
+static const char *m_txt_record[] = {
+	"version=" APP_VERSION_STRING,
+	"commit=" STRINGIFY(APP_BUILD_VERSION),
+	"board=" CONFIG_BOARD,
+};
+// TODO add Zephyr board revision
+/* clang-format on */
+
+K_SEM_DEFINE(m_interface_up, 0, 1);
+static struct net_mgmt_event_callback m_iface_cb;
+
 /*------------------------------ Private Functions ---------------------------*/
+
+static void iface_event_handler(struct net_mgmt_event_callback *cb, uint64_t mgmt_event,
+				struct net_if *iface)
+{
+	if (mgmt_event == NET_EVENT_IF_UP) {
+		k_sem_give(&m_interface_up);
+	}
+}
+
+static void wait_for_iface_up(void)
+{
+	if (net_if_is_up(net_if_get_default())) {
+		k_sem_give(&m_interface_up);
+	}
+
+	k_sem_take(&m_interface_up, K_FOREVER);
+}
 
 static int welcome(int fd)
 {
-	static const char msg[] = "Bonjour, Zephyr world!\n";
+	static const char msg[] = "Welcome to the uPTP Service\n";
 
 	return send(fd, msg, sizeof(msg), 0);
 }
@@ -53,11 +89,6 @@ static void service(void)
 	uint8_t line[64];
 
 	static struct sockaddr server_addr;
-
-	k_msleep(5000);
-
-	DNS_SD_REGISTER_TCP_SERVICE(uptp, CONFIG_NET_HOSTNAME, "_uptp", "local", DNS_SD_EMPTY_TXT,
-				    DEFAULT_PORT);
 
 	if (IS_ENABLED(CONFIG_NET_IPV6)) {
 		net_sin6(&server_addr)->sin6_family = AF_INET6;
@@ -155,11 +186,33 @@ int net_mgr_init(void)
 
 void net_mgr_thread(void *arg1, void *arg2, void *arg3)
 {
-	service();
-	LOG_ERR("DNS-SD Service Terminated Prematurely!");
+	net_mgmt_init_event_callback(&m_iface_cb, iface_event_handler, NET_EVENT_IF_UP);
+	net_mgmt_add_event_callback(&m_iface_cb);
+	net_config_init_app(NULL, "Initializing network"); // will timeout if interface isn't up
+	wait_for_iface_up();
+
+	// Construct TXT record and pass to DNS-SD
+	size_t idx = 0;
+	for (size_t i = 0; i < ARRAY_SIZE(m_txt_record); i++) {
+		size_t record_len = strlen(m_txt_record[i]);
+		if (idx + record_len + 1 >= sizeof(m_txt_buf)) {
+			break;
+		}
+		m_txt_buf[idx] = record_len;
+		memcpy(&m_txt_buf[idx + 1], m_txt_record[i], record_len);
+		idx += record_len + 1;
+	}
+	m_txt_buf[idx] = '\0';
+
+	strncpy(m_hostname, net_hostname_get(), sizeof(m_hostname));
+	DNS_SD_REGISTER_TCP_SERVICE(uptp, m_hostname, "_uptp", "local", m_txt_buf, DEFAULT_PORT);
 
 	while (1) {
-		k_msleep(1000);
+		// If service is terminated, relaunch while link is up
+		service();
+
+		k_msleep(100);
+		wait_for_iface_up();
 	}
 }
 

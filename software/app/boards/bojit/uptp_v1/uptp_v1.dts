@@ -21,20 +21,6 @@
 		zephyr,console = &usart4;
 		zephyr,shell-uart = &usart4;
 	};
-
-	soc {
-		/* Temporary until PR #101688 merged */
-		spi1:spi@40013000 {
-			compatible = "wch,spi";
-			reg = <0x40013000 0x24>;
-			clocks = <&rcc CH32V20X_V30X_CLOCK_SPI1>;
-			interrupt-parent = <&pfic>;
-			interrupts = <51>;
-			status = "disabled";
-			#address-cells = <1>;
-			#size-cells = <0>;
-		};
-	};
 };
 
 &clk_hse {
@@ -53,6 +39,10 @@
 
 
 &gpioa {
+	status = "okay";
+};
+
+&gpiob {
 	status = "okay";
 };
 
@@ -106,4 +96,10 @@
 		compatible = "ethernet-phy";
 		reg = <0x00>;
 	};
+};
+
+&ptp_clock {
+	status = "okay";
+	pinctrl-0 = <&ptp_clock_default>;
+	pinctrl-names = "default";
 };
