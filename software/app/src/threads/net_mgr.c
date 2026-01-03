@@ -17,6 +17,7 @@
 
 #include <zephyr/net/dns_sd.h>
 #include <zephyr/net/socket.h>
+#include <zephyr/net/net_config.h>
 
 #include <zephyr/posix/arpa/inet.h>
 #include <zephyr/posix/netinet/in.h>
@@ -155,8 +156,11 @@ int net_mgr_init(void)
 
 void net_mgr_thread(void *arg1, void *arg2, void *arg3)
 {
+	net_config_init_app(NULL, "Initializing network"); // Waits for interface up initially
+
 	service();
 	LOG_ERR("DNS-SD Service Terminated Prematurely!");
+	// TODO ensure service is only up when link is up
 
 	while (1) {
 		k_msleep(1000);

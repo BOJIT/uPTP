@@ -52,6 +52,8 @@ struct k_thread m_net_mgr_thread;
 
 /*-------------------------------- Entry Point -------------------------------*/
 
+#define ADJ_FREQ_BASE_ADDEND (uint32_t)(UINT32_MAX * (50000000 / (float)(144 * 4)))
+
 int main(void)
 {
 	static const struct device *strip = DEVICE_DT_GET_OR_NULL(LED_STRIP_NODE);
@@ -71,6 +73,8 @@ int main(void)
 			led_strip_update_rgb(strip, &m_colours[i], 1);
 			i = (i + 1) % ARRAY_SIZE(m_colours);
 		}
+
+		// LOG_INF("PTP_REGS: %u, %u", ETH->PTPTSHR, ETH->PTPTSLR);
 
 		k_msleep(1000);
 	}

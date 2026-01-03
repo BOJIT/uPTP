@@ -5,7 +5,8 @@ manifest:
     - name: zephyr
       # revision: v4.2.0
       # url: https://github.com/zephyrproject-rtos/zephyr
-      revision: driver/ch32v30x_ethernet_fixes
+      # revision: driver/ch32v30x_ethernet_fixes
+      revision: test/ptp-clock
       url: https://github.com/BOJIT/zephyr
 
       import:
