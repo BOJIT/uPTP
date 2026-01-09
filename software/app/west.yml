@@ -6,7 +6,8 @@ manifest:
       # revision: v4.2.0
       # url: https://github.com/zephyrproject-rtos/zephyr
       revision: driver/ch32v30x_ethernet
-      url: git@github.com:BOJIT/zephyr.git
+      url: https://github.com/BOJIT/zephyr
+      # url: git@github.com:BOJIT/zephyr.git
 
       import:
         file: west.yml

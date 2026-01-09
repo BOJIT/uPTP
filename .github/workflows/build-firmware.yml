@@ -15,11 +15,11 @@ on:
         default: LATEST
 
 jobs:
-  build-firmware:
+  build:
     strategy:
       fail-fast: false
       matrix:
-        board: ["chv32307evt", "uptp_v1", "nucleo_f767zi_custom"]
+        board: ["ch32v307evt", "uptp_v1", "nucleo_f767zi_custom"]
     runs-on: ubuntu-latest
     outputs:
       release_version: ${{ steps.vnumbers.outputs.release_version }}
@@ -33,7 +33,7 @@ jobs:
         id: cache-deps
         uses: actions/cache@v4
         with:
-          path: firmware/deps
+          path: software/deps
           key: cache-deps-${{ hashFiles('software/app/west.yml') }}
 
       - name: Determine SDK version
@@ -52,9 +52,10 @@ jobs:
       - name: Setup Zephyr project
         uses: zephyrproject-rtos/action-zephyr-setup@v1
         with:
-          base-path: firmware
+          base-path: software
           app-path: app
-          toolchains: arm-zephyr-eabi
+          toolchains: arm-zephyr-eabi:riscv64-zephyr-elf
+
           sdk-version: ${{ steps.sdk-version.outputs.SDK_VERSION }}
 
     #   - name: Install user packages
@@ -62,7 +63,7 @@ jobs:
     #     run: |
     #         pip install -r requirements.txt
 
-      - name: Build for Target Board
+      - name: Build for target board
         working-directory: software/app
         run: |
           west build -b ${{matrix.board}} --pristine -- -DBOARD_ROOT=.
