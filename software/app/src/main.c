@@ -26,16 +26,16 @@ LOG_MODULE_REGISTER(main, CONFIG_LOG_DEFAULT_LEVEL);
 struct led_rgb m_colours[3] = {
 	{
 		.r = 0x50,
-		.g = 0x00,
-		.b = 0x00,
-	},
-	{
-		.r = 0x00,
 		.g = 0x50,
 		.b = 0x00,
 	},
 	{
 		.r = 0x00,
+		.g = 0x50,
+		.b = 0x50,
+	},
+	{
+		.r = 0x50,
 		.g = 0x00,
 		.b = 0x50,
 	},

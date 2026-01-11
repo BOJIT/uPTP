@@ -51,6 +51,21 @@
 		led0 = &red_led;
 		sw0 = &user_button0;
 	};
+
+
+	soc {
+		/* Temporary until PR #101688 merged */
+		spi1:spi@40013000 {
+			compatible = "wch,spi";
+			reg = <0x40013000 0x24>;
+			clocks = <&rcc CH32V20X_V30X_CLOCK_SPI1>;
+			interrupt-parent = <&pfic>;
+			interrupts = <51>;
+			status = "disabled";
+			#address-cells = <1>;
+			#size-cells = <0>;
+		};
+	};
 };
 
 &clk_hse {

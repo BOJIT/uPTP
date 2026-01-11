@@ -3,9 +3,11 @@ manifest:
 
   projects:
     - name: zephyr
-      revision: v4.2.0
-      url: https://github.com/zephyrproject-rtos/zephyr
-      # url: git@github.com:BOJIT/zephyr.git
+      # revision: v4.2.0
+      # url: https://github.com/zephyrproject-rtos/zephyr
+      revision: driver/ch32v30x_ethernet_fixes
+      url: https://github.com/BOJIT/zephyr
+
       import:
         file: west.yml
         path-prefix: deps
