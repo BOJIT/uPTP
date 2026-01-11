@@ -21,6 +21,20 @@
 		zephyr,console = &usart4;
 		zephyr,shell-uart = &usart4;
 	};
+
+	soc {
+		/* Temporary until PR #101688 merged */
+		spi1:spi@40013000 {
+			compatible = "wch,spi";
+			reg = <0x40013000 0x24>;
+			clocks = <&rcc CH32V20X_V30X_CLOCK_SPI1>;
+			interrupt-parent = <&pfic>;
+			interrupts = <51>;
+			status = "disabled";
+			#address-cells = <1>;
+			#size-cells = <0>;
+		};
+	};
 };
 
 &clk_hse {
@@ -53,23 +67,23 @@
 	pinctrl-names = "default";
 };
 
-// &spi1 {
-// 	status = "okay";
-// 	pinctrl-0 = <&spi1_default>;
-// 	pinctrl-names = "default";
+&spi1 {
+	status = "okay";
+	pinctrl-0 = <&spi1_default>;
+	pinctrl-names = "default";
 
-// 	led_strip: ws2812@0 {
-// 		compatible = "worldsemi,ws2812-spi";
-// 		status = "okay";
-// 		reg = <0>;
-// 		spi-cpha;
-// 		spi-one-frame = <0xf0>;  /* 1100ns HIGH */
-// 		spi-zero-frame = <0x80>; /* 460ns HIGH */
-// 		spi-max-frequency = <4600000>;
-// 		chain-length = <1>;
-// 		color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-// 	};
-// };
+	led_strip: ws2812@0 {
+		compatible = "worldsemi,ws2812-spi";
+		status = "okay";
+		reg = <0>;
+		spi-cpha;
+		spi-one-frame = <0xf0>;  /* 1100ns HIGH */
+		spi-zero-frame = <0x80>; /* 460ns HIGH */
+		spi-max-frequency = <4600000>;
+		chain-length = <1>;
+		color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+	};
+};
 
 &rng {
 	status = "okay";

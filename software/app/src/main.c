@@ -21,25 +21,25 @@
 
 LOG_MODULE_REGISTER(main, CONFIG_LOG_DEFAULT_LEVEL);
 
-// #define LED_STRIP_NODE DT_NODELABEL(led_strip)
+#define LED_STRIP_NODE DT_NODELABEL(led_strip)
 
-// struct led_rgb m_colours[3] = {
-// 	{
-// 		.r = 0x50,
-// 		.g = 0x00,
-// 		.b = 0x00,
-// 	},
-// 	{
-// 		.r = 0x00,
-// 		.g = 0x50,
-// 		.b = 0x00,
-// 	},
-// 	{
-// 		.r = 0x00,
-// 		.g = 0x00,
-// 		.b = 0x50,
-// 	},
-// };
+struct led_rgb m_colours[3] = {
+	{
+		.r = 0x50,
+		.g = 0x50,
+		.b = 0x00,
+	},
+	{
+		.r = 0x00,
+		.g = 0x50,
+		.b = 0x50,
+	},
+	{
+		.r = 0x50,
+		.g = 0x00,
+		.b = 0x50,
+	},
+};
 
 /*----------------------------------- State ----------------------------------*/
 
@@ -54,12 +54,12 @@ struct k_thread m_net_mgr_thread;
 
 int main(void)
 {
-	// static const struct device *strip = DEVICE_DT_GET_OR_NULL(LED_STRIP_NODE);
+	static const struct device *strip = DEVICE_DT_GET_OR_NULL(LED_STRIP_NODE);
 
-	// if (!strip || !device_is_ready(strip)) {
-	// 	LOG_ERR("LED device not ready");
-	// 	return -EIO;
-	// }
+	if (!strip || !device_is_ready(strip)) {
+		LOG_ERR("LED device not ready");
+		return -EIO;
+	}
 
 	net_mgr_init();
 	k_thread_create(&m_net_mgr_thread, m_net_mgr_stack, K_THREAD_STACK_SIZEOF(m_net_mgr_stack),
@@ -67,10 +67,10 @@ int main(void)
 
 	size_t i = 0;
 	while (1) {
-		// if (strip) {
-		// 	led_strip_update_rgb(strip, &m_colours[i], 1);
-		// 	i = (i + 1) % ARRAY_SIZE(m_colours);
-		// }
+		if (strip) {
+			led_strip_update_rgb(strip, &m_colours[i], 1);
+			i = (i + 1) % ARRAY_SIZE(m_colours);
+		}
 
 		k_msleep(1000);
 	}
