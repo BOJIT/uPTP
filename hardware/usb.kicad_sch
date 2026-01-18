@@ -144,6 +144,157 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:FerriteBead_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "FB"
+				(at 1.905 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "FerriteBead_Small"
+				(at 1.905 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Ferrite bead, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "L ferrite bead inductor filter"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Inductor_* L_* *Ferrite*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "FerriteBead_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.8288 0.2794) (xy -1.1176 1.4986) (xy 1.8288 -0.2032) (xy 1.1176 -1.4224) (xy -1.8288 0.2794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.889) (xy 0 1.2954)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 -0.7874)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "FerriteBead_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -1281,6 +1432,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 81.28) (xy 120.65 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08014099-9f1c-4e28-8e40-e4162e4e096a")
+	)
+	(wire
+		(pts
 			(xy 199.39 71.12) (xy 203.2 71.12)
 		)
 		(stroke
@@ -1301,7 +1462,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 63.5) (xy 120.65 81.28)
+			(xy 120.65 63.5) (xy 120.65 69.85)
 		)
 		(stroke
 			(width 0)
@@ -1411,16 +1572,6 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 104.14) (xy 120.65 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b0c4086-162d-4a8c-8af0-05779d19c332")
-	)
-	(wire
-		(pts
 			(xy 109.22 88.9) (xy 111.76 88.9)
 		)
 		(stroke
@@ -1468,6 +1619,16 @@
 			(type default)
 		)
 		(uuid "721844f3-d4d7-4c68-bc92-8e339ebaa6e1")
+	)
+	(wire
+		(pts
+			(xy 120.65 74.93) (xy 120.65 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74451add-a84e-47de-9bbb-868a1fe75500")
 	)
 	(wire
 		(pts
@@ -1608,6 +1769,17 @@
 			(type default)
 		)
 		(uuid "fadcffb6-18eb-403e-8fa1-98e56db83ee1")
+	)
+	(label "5V_USB_FB"
+		(at 120.65 95.25 90)
+		(effects
+			(font
+				(size 0.508 0.508)
+				(color 132 132 132 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "4b9293c7-9df0-419d-a2ba-18b3e0bd7413")
 	)
 	(label "USB_CC1"
 		(at 139.7 114.3 90)
@@ -2708,6 +2880,85 @@
 			(project "uPTP"
 				(path "/c29659fd-9e8d-4714-a690-4e74e6e849c2/a01e8bf2-a35e-4434-a60c-3e16f0eed29e"
 					(reference "#PWR044")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:FerriteBead_Small")
+		(at 120.65 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e62d790a-a7d4-4737-ab87-63de3990f16d")
+		(property "Reference" "FB3"
+			(at 123.19 71.0818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GZ1608D601TF"
+			(at 123.19 73.6218 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 118.872 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "GZ1608D601TF"
+			(at 120.65 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C1002"
+			(at 120.65 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6020b513-b79e-4400-9dea-0365687fd1e8")
+		)
+		(pin "1"
+			(uuid "55864b87-5194-47ef-9daf-320ebb04a26c")
+		)
+		(instances
+			(project "uPTP"
+				(path "/c29659fd-9e8d-4714-a690-4e74e6e849c2/a01e8bf2-a35e-4434-a60c-3e16f0eed29e"
+					(reference "FB3")
 					(unit 1)
 				)
 			)

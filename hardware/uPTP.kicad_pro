@@ -62,10 +62,6 @@
           "Added 3D Model to Core Library"
         ],
         [
-          "lib_footprint_mismatch|166233938|102509964|8ff69dfe-e1d9-4274-aab1-a7070fa6dfe7|00000000-0000-0000-0000-000000000000",
-          "Silkscreen Cutout Added"
-        ],
-        [
           "text_thickness|137000000|89500000|377af752-3917-41c2-bb51-d67ad807f6ac|00000000-0000-0000-0000-000000000000",
           "Large font, weight is fine"
         ]

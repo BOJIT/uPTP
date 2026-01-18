@@ -209,7 +209,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:Conn_01x04_Pin"
+		(symbol "Connector:Conn_01x05_Pin"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -218,14 +218,14 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "J"
-				(at 0 5.08 0)
+				(at 0 7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Conn_01x04_Pin"
+			(property "Value" "Conn_01x05_Pin"
 				(at 0 -7.62 0)
 				(effects
 					(font
@@ -251,7 +251,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x04, script generated"
+			(property "Description" "Generic connector, single row, 01x05, script generated"
 				(at 0 0 0)
 				(effects
 					(font
@@ -286,7 +286,18 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x04_Pin_1_1"
+			(symbol "Conn_01x05_Pin_1_1"
+				(rectangle
+					(start 0.8636 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 				(rectangle
 					(start 0.8636 2.667)
 					(end 0 2.413)
@@ -329,6 +340,18 @@
 					)
 					(fill
 						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 5.08) (xy 0.8636 5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 				(polyline
@@ -380,7 +403,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 2.54 180)
+					(at 5.08 5.08 180)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -398,7 +421,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 0 180)
+					(at 5.08 2.54 180)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -416,7 +439,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 -2.54 180)
+					(at 5.08 0 180)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -434,7 +457,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 -5.08 180)
+					(at 5.08 -2.54 180)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -444,6 +467,24 @@
 						)
 					)
 					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -5.08 180)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2717,6 +2758,16 @@
 	)
 	(wire
 		(pts
+			(xy 228.6 142.24) (xy 266.7 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95c91b95-b957-45c5-bea3-77ff933be101")
+	)
+	(wire
+		(pts
 			(xy 241.3 93.98) (xy 241.3 101.6)
 		)
 		(stroke
@@ -4722,11 +4773,11 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x04_Pin")
+		(lib_id "Connector:Conn_01x05_Pin")
 		(at 271.78 137.16 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "d9784eb1-2f5a-46e0-a23b-06468fb259aa")
@@ -4739,14 +4790,14 @@
 			)
 		)
 		(property "Value" "UART_HDR"
-			(at 271.145 142.24 0)
+			(at 272.034 128.778 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Horizontal"
 			(at 271.78 137.16 0)
 			(effects
 				(font
@@ -4764,7 +4815,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
+		(property "Description" "Generic connector, single row, 01x05, script generated"
 			(at 271.78 137.16 0)
 			(effects
 				(font
@@ -4784,6 +4835,9 @@
 		)
 		(pin "3"
 			(uuid "bf70e106-26dd-47af-9b15-a9b99bd4620b")
+		)
+		(pin "5"
+			(uuid "dda4826a-7024-4ce7-a81f-d03da60e592f")
 		)
 		(instances
 			(project ""
@@ -5271,6 +5325,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "GPS_IN" input
+			(at 228.6 142.24 0)
+			(uuid "29f46d0d-d209-4f8b-b3c4-6e2121f52632")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
