@@ -3397,12 +3397,6 @@
 		(uuid "ab84fd6f-aae1-498c-941c-679f5d7558b0")
 	)
 	(junction
-		(at 251.46 50.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b72011d4-706b-4404-a6bf-845495a92c2a")
-	)
-	(junction
 		(at 210.82 127)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3591,6 +3585,16 @@
 			(type default)
 		)
 		(uuid "03e6580b-bce8-482a-9b20-6a944d6cf8d0")
+	)
+	(wire
+		(pts
+			(xy 241.3 38.1) (xy 241.3 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0497c8f1-fb2d-4919-a149-361de3a35c07")
 	)
 	(wire
 		(pts
@@ -3944,16 +3948,6 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 53.34) (xy 241.3 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e7aa156-d917-44d1-8bf8-c6acfac73fa7")
-	)
-	(wire
-		(pts
 			(xy 203.2 38.1) (xy 203.2 58.42)
 		)
 		(stroke
@@ -4101,16 +4095,6 @@
 			(type default)
 		)
 		(uuid "7a2f61cb-01af-49f5-ac24-c747fdd9b1e8")
-	)
-	(wire
-		(pts
-			(xy 241.3 50.8) (xy 251.46 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ee0aaf2-5c36-4eb8-a928-8a902b66992d")
 	)
 	(wire
 		(pts
@@ -7171,6 +7155,72 @@
 			(project "uPTP"
 				(path "/c29659fd-9e8d-4714-a690-4e74e6e849c2/8b18d07b-35a1-429b-b7b2-9d337819a16d"
 					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 241.3 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a7ca8048-2a3e-4705-97d1-4657f803ed46")
+		(property "Reference" "#PWR051"
+			(at 241.3 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 241.3 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 241.3 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 241.3 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 241.3 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cf8f5b41-2057-4168-8a55-b46b1417da68")
+		)
+		(instances
+			(project "uPTP"
+				(path "/c29659fd-9e8d-4714-a690-4e74e6e849c2/8b18d07b-35a1-429b-b7b2-9d337819a16d"
+					(reference "#PWR051")
 					(unit 1)
 				)
 			)
