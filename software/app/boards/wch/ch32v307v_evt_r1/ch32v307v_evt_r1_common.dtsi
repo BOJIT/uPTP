@@ -1,19 +1,21 @@
 /*
  * Copyright (c) 2025 Thomas Boje
+ * Copyright (c) 2026 Pavel Löbl
+ * Copyright (c) 2026 James Bennion-Pedley
  * SPDX-License-Identifier: Apache-2.0
  */
-
-/dts-v1/;
 
 #include <wch/ch32v307/ch32v307vc.dtsi>
 #include <zephyr/dt-bindings/gpio/gpio.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include "ch32v307v_evt_r1-pinctrl.dtsi"
+
+// TODO remove before merging
 #include <zephyr/dt-bindings/led/led.h>
-#include "ch32v307evt-pinctrl.dtsi"
 
 / {
-	model = "scdz_ch32v307evt";
-	compatible = "scdz,ch32v307";
+	model = "wch_ch32v307v_evt_r1";
+	compatible = "wch,ch32v307";
 
 	chosen {
 		zephyr,sram = &sram0;
@@ -22,54 +24,22 @@
 		zephyr,shell-uart = &usart1;
 	};
 
-	leds {
-		compatible = "gpio-leds";
-
-		/*
-		 * Please connect the unconnected LED1 on the SCDZ CH32V307EVT
-		 * board to a suitable GPIO pin (like PD1) and then change
-		 * this status to "okay".
-		 */
-		status = "okay";
-
-		red_led: led0 {
-			gpios = <&gpiod 1 GPIO_ACTIVE_LOW>;
-		};
-	};
-
 	buttons {
 		compatible = "gpio-keys";
 
-		user_button0: sw0 {
-			label = "User SW0";
+		user_button0: s2 {
+			label = "user";
 			gpios = <&gpioa 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 			zephyr,code = <INPUT_KEY_0>;
 		};
 	};
 
 	aliases {
-		led0 = &red_led;
 		sw0 = &user_button0;
-	};
-
-
-	soc {
-		/* Temporary until PR #101688 merged */
-		spi1:spi@40013000 {
-			compatible = "wch,spi";
-			reg = <0x40013000 0x24>;
-			clocks = <&rcc CH32V20X_V30X_CLOCK_SPI1>;
-			interrupt-parent = <&pfic>;
-			interrupts = <51>;
-			status = "disabled";
-			#address-cells = <1>;
-			#size-cells = <0>;
-		};
 	};
 };
 
 &clk_hse {
-	clock-frequency = <DT_FREQ_M(8)>;
 	status = "okay";
 };
 
@@ -82,12 +52,23 @@
 	clocks = <&pll>;
 };
 
-
 &gpioa {
 	status = "okay";
 };
 
+&gpiob {
+	status = "okay";
+};
+
 &gpioc {
+	status = "okay";
+};
+
+&gpiod {
+	status = "okay";
+};
+
+&gpioe {
 	status = "okay";
 };
 
@@ -98,6 +79,7 @@
 	pinctrl-names = "default";
 };
 
+// TODO remove this node before merging
 &spi1 {
 	status = "okay";
 	pinctrl-0 = <&spi1_default>;

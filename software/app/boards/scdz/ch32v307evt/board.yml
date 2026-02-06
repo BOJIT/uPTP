@@ -1,6 +1,0 @@
-board:
-  name: ch32v307evt
-  full_name: SCDZ_CH32V307EVT
-  vendor: scdz
-  socs:
-    - name: ch32v307

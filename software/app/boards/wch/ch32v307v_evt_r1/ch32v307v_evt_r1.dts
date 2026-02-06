@@ -1,0 +1,3 @@
+/dts-v1/;
+
+#include "ch32v307v_evt_r1_common.dtsi"
