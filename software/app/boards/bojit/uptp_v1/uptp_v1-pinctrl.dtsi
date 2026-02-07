@@ -54,4 +54,14 @@
 	mdio_default: mdio_default {
 		/* No MDIO pinmux required for internal PHY */
 	};
+
+	ptp_clock_default: ptp_clock_default {
+		ptp_pps {
+			pinmux = <CH32V20X_V30X_PINMUX_DEFINE(PB, 5, PTP_PPS, 1)>;
+			/* pinmux = <CH32V20X_V30X_PINMUX_DEFINE(PB, 5, TIM10, 1)>; */
+			output-high;
+			drive-push-pull;
+			slew-rate = "max-speed-50mhz";
+		};
+	};
 };

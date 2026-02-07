@@ -3,10 +3,11 @@ manifest:
 
   projects:
     - name: zephyr
-      # revision: v4.2.0
+      # revision: v4.3.0
       # url: https://github.com/zephyrproject-rtos/zephyr
-      revision: driver/ch32v30x_ethernet_fixes
       url: https://github.com/BOJIT/zephyr
+      revision: experiment/ptp-clock
+      # revision: driver/ch32v30x_ethernet_fixes
 
       import:
         file: west.yml

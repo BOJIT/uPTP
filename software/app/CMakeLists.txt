@@ -7,3 +7,5 @@ target_sources(app PRIVATE
     src/threads/net_mgr.c
     src/threads/nmea_mgr.c
 )
+
+target_include_directories(app PRIVATE ${ZEPHYR_BASE}/subsys/net/lib)

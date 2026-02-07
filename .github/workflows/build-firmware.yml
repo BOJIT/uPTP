@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        board: ["ch32v307evt", "uptp_v1", "nucleo_f767zi_custom"]
+        board: ["ch32v307evt", "uptp_v1", "nucleo_f767zi"]
     runs-on: ubuntu-latest
     outputs:
       release_version: ${{ steps.vnumbers.outputs.release_version }}

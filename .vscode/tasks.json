@@ -44,7 +44,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "command": "source ${workspaceFolder}/.venv/bin/activate && rm -rf ./build && west build -b nucleo_f767zi_custom -- -DBOARD_ROOT=.",
+            "command": "source ${workspaceFolder}/.venv/bin/activate && rm -rf ./build && west build -b nucleo_f767zi -- -DBOARD_ROOT=.",
             "problemMatcher": [
                 "$gcc"
             ],
