@@ -20,6 +20,25 @@
             ]
         },
         {
+            "name": "Debug Zephyr",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "./build/zephyr/zephyr.elf",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/software/deps/zephyr",
+            "MIMode": "gdb",
+            "miDebuggerPath": "${env:HOME}/zephyr-sdk-0.17.0/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gdb",
+            "miDebuggerServerAddress": "localhost:3333",
+            "setupCommands": [
+                {
+                    "description": "Pretty print for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
             "name": "Debug (OpenOCD)",
             "cwd": "${workspaceFolder}/software/app",
             "executable": "./build/zephyr/zephyr.elf",

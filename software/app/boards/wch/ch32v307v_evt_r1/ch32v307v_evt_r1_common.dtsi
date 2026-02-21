@@ -120,3 +120,12 @@
 		reg = <0x00>;
 	};
 };
+
+zephyr_udc0: &usb0 {
+	status = "okay";
+
+	cdc_acm_uart0: cdc_acm_uart0 {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "Zephyr USB CDC-ACM";
+	};
+};
