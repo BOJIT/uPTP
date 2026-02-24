@@ -1,0 +1,16 @@
+&pinctrl {
+	ptp_clock_default: ptp_clock_default {
+		ptp_pps {
+			pinmux = <CH32V20X_V30X_PINMUX_DEFINE(PB, 5, PTP_PPS, 1)>;
+			output-high;
+			drive-push-pull;
+			slew-rate = "max-speed-50mhz";
+		};
+	};
+};
+
+&ptp_clock {
+	status = "okay";
+	pinctrl-0 = <&ptp_clock_default>;
+	pinctrl-names = "default";
+};
